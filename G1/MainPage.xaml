@@ -1,0 +1,30 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuessTheWordGame.MainPage">
+
+    <StackLayout Padding="20">
+        <Label Text="Guess the Word!"
+               FontSize="32"
+               HorizontalOptions="Center" />
+
+        <Label Text="{Binding CurrentWordDisplay}"
+               FontSize="24"
+               HorizontalOptions="Center" />
+
+        <Entry Text="{Binding CurrentGuess}"
+               Placeholder="Enter a letter"
+               MaxLength="1" />
+
+        <Button Text="Guess"
+                Command="{Binding GuessCommand}" />
+
+        <Label Text="{Binding Message}"
+               FontSize="18"
+               TextColor="Red"
+               HorizontalOptions="Center" />
+
+        <Label Text="{Binding AttemptsLeft, StringFormat='Attempts Left: {0}'}"
+               FontSize="18"
+               HorizontalOptions="Center" />
+    </StackLayout>
+</ContentPage>
